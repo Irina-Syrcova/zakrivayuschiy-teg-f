@@ -7,6 +7,7 @@
 
 :root.theme-dark {
   --wght: 465;
+  --title-wght: 785;
   --bg-color: #000;
   --accent-color: #00CC14;
   --bg-image: repeating-linear-gradient(
@@ -33,6 +34,7 @@
 
 :root.theme-light {
   --wght: 400;
+  --title-wght: 700;
   --bg-color: #FFF;
   --accent-color: #000;
   --bg-image: repeating-linear-gradient(
@@ -61,6 +63,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --wght: 465;
+    --title-wght: 785;
     --bg-color: #000;
     --accent-color: #00CC14;
     --bg-image: repeating-linear-gradient(
