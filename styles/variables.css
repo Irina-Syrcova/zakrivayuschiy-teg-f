@@ -2,6 +2,8 @@
 :root {
   --wght: 400;
   --title-wght: 700;
+  --font-inter: "Inter-Variable";
+  --font-fantasy: "PressStart2P";
   --bg-color: #FFF;
   --accent-color: #000;
   --bg-image: repeating-linear-gradient(

@@ -29,3 +29,12 @@
     fill: var(--sparks);
   }
 }
+
+@keyframes active {
+  from {
+    left: -18px;
+  }
+  to {
+    left: -14px;
+  }
+}

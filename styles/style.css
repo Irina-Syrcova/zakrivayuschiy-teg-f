@@ -18,7 +18,7 @@
   position: relative;
   padding-block: 102px 105px;
   color: var(--accent-color);
-  font-family: "Inter-Variable", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
@@ -36,10 +36,15 @@
   margin: 0 auto;
   margin-block-end: 104px;
   border: 2px solid var(--accent-color);
-  padding-block: 25px;
-  padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  font-family: "PressStart2P", fantasy;
+  padding-block-end: 25px;
+  padding-block-start: 136px;
+  padding-inline:14px;
+  font-family: var(--font-fantasy), fantasy;
   background-color: var(--header-bg);
+
+  @media (max-width: 375px) {
+    padding-block-start: 120px;
+  }
 }
 
 .header__logo-group {
@@ -50,12 +55,14 @@
 .header__title {
   display: block;
   margin-block-end: 20px;
+  line-height: normal;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
+  line-height: normal;
 }
 
 .theme-menu {
@@ -82,6 +89,7 @@
 
 .theme-menu__button {
   position: relative;
+  display: block;
   border: none;
   background-color: transparent;
   text-transform: uppercase;
@@ -142,15 +150,6 @@
   pointer-events: none;
 }
 
-@keyframes active {
-  from {
-    left: -18px;
-  }
-  to {
-    left: -14px;
-  }
-}
-
 .card {
   width: clamp(371px, 50%, 696px);
   margin: 0 auto;
@@ -181,10 +180,14 @@
   top: 25px;
   right: 25px;
   opacity: 0.5;
-  font-family: "PressStart2P";
+  font-family: var(--font-fantasy), fantasy;
   font-size: 14px;
   text-shadow: 1px 1px var(--bg-color), -1px -1px var(--bg-color);
   mix-blend-mode: hard-light;
+
+  @media (max-width: 375px) {
+    right: 11px;
+  }
 
   @supports (text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color)) {
     text-shadow: none;
@@ -235,7 +238,7 @@
   position: relative;
   z-index: 1;
   color: var(--btn);
-  font-family: "PressStart2P";
+  font-family: var(--font-fantasy), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
@@ -446,7 +449,7 @@
   min-width: 198px;
   max-width: 234px;
   color: var(--accent-color);
-  font-family: "PressStart2P";
+  font-family: var(--font-fantasy), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
@@ -457,7 +460,7 @@
   width: 100%;
   border: 2px solid var(--accent-color);
   padding: 9px 17px;
-  font-family: "PressStart2P";
+  font-family: var(--font-fantasy), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
